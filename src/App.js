@@ -32,9 +32,9 @@ export default function App() {
         
         {/* HERO SECTION */}
         <header id="home" className="hero" style={{ 
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.45)), url('/img/code1.jpg')`,
-          backgroundSize: 'cover',backgroundPosition: 'center',backgroundAttachment: 'fixed' }}>
-          <div className="hero-content">
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.30), rgba(0,0,0,0.45)), url(${process.env.PUBLIC_URL + '/img/code1.jpg'})`,
+        backgroundSize: 'cover',backgroundPosition: 'center',backgroundAttachment: 'fixed' }}>
+       <div className="hero-content">
             <h1 className="hero-title">Hi, I'm <span className="highlight">Rashi</span></h1>
             <h2 className="tagline">Full Stack Developer | Java </h2>
             <p className="hero-desc">
@@ -61,6 +61,9 @@ export default function App() {
       to ensure every line of logic is clean, optimized, and built for performance.
     </p>
             <div className="intro-btns">
+              <button className="btn-purple" onClick={() => window.open('/Resume.pdf', '_blank')}>
+              Get Resume <i className="fas fa-external-link-alt"></i>
+              </button>
               <button className="btn-purple" onClick={() => window.open('/path-to-your-resume.pdf')}>
                 Get Resume <i className="fas fa-external-link-alt"></i>
               </button>
@@ -380,3 +383,4 @@ export default function App() {
     </div>
   );
 }
+
