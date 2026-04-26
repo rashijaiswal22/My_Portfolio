@@ -61,12 +61,9 @@ export default function App() {
       to ensure every line of logic is clean, optimized, and built for performance.
     </p>
             <div className="intro-btns">
-              <button className="btn-purple" onClick={() => window.open('/Resume.pdf', '_blank')}>
-              Get Resume <i className="fas fa-external-link-alt"></i>
-              </button>
-              <button className="btn-purple" onClick={() => window.open('/path-to-your-resume.pdf')}>
-                Get Resume <i className="fas fa-external-link-alt"></i>
-              </button>
+              <button className="btn-purple"  onClick={() => window.open(`${process.env.PUBLIC_URL}/Resume.pdf`, '_blank')}>  Get Resume <i className="fas fa-external-link-alt"></i>
+</button>
+              
               <button className="btn-outline" onClick={() => window.location.href = 'mailto:jaiswalrashi135@gmail.com'}>
                 <i className="far fa-envelope"></i> Send Mail
               </button>
@@ -383,4 +380,5 @@ export default function App() {
     </div>
   );
 }
+
 
